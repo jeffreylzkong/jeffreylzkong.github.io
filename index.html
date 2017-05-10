@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+  <head>
+    <script src='//code.responsivevoice.org/responsivevoice.js'></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  </head>
+  <body>
+
+    <textarea id="text" cols="45" rows="3"></textarea>
+    <h1 id="display"></h1>
+
+    <script>
+      var text = '';
+      $('body').keypress(function(e){
+        var value = String.fromCharCode(e.keyCode);
+        text += value;
+        $('#display').text(text);
+        responsiveVoice.speak(value, 'US English Female')
+      })
+    
+    </script>
+  
+  </body>
+
+</html>
