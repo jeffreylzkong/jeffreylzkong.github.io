@@ -11,7 +11,7 @@
     <script>
       var text = '';
       $('body').keypress(function(e){
-        var value = String.fromCharCode(e.keyCode);
+        var value = String.fromCharCode( e.charCode || e.keyCode);
         text += value;
         $('#display').text(text);
         responsiveVoice.speak(value, 'US English Female')
