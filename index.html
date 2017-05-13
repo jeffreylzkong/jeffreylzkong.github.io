@@ -14,6 +14,7 @@
       var code = e.keyCode || e.charCode;
       var value = e.key || String.fromCharCode(code);
       if (value == '*') {
+        text=text+'*';
         $('#display').html(text);
         responsiveVoice.speak('star', 'US English Female')
       } else if (code == 8) {
