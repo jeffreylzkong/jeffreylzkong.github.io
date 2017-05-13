@@ -13,7 +13,10 @@
     $('body').keyup(function(e){
       var code = e.keyCode || e.charCode;
       var value = e.key || String.fromCharCode(code);
-      if (code == 8) {
+      if (value == '*') {
+        $('#display').html(text);
+        responsiveVoice.speak('star', 'US English Female')
+      } else if (code == 8) {
         text = text.slice(0, -1);
         $('#display').html(text);
         responsiveVoice.speak('backspace', 'US English Female')
