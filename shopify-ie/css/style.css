@@ -1,14 +1,21 @@
 @font-face {
   font-family: 'orbitron';
-  src: url('../fonts/orbitron-normal-normal.ttf');
+  src: url('/fonts/orbitron-normal-normal.ttf');
 }
 
 @font-face {
   font-family: 'orbitron';
-  src:  url('../fonts/orbitron-bold-normal.ttf');
+  src:  url('/fonts/orbitron-bold-normal.ttf');
   font-weight:bold;
 }
 
+@font-face {
+  font-family: 'yellowtail';
+  src: url('/fonts/yellowtail-normal-normal.ttf');
+}
+p{
+  font-weight: lighter;
+}
 a{
   color: inherit;
 }
@@ -18,6 +25,12 @@ a:focus, a:hover{
 }
 .padding-top-90{
 	padding-top: 90px;
+}
+.padding-top-60{
+  padding-top: 60px;
+}
+.padding-top-30{
+  padding-top: 30px;
 }
 .margin-top-30{
 	margin-top: 30px;
@@ -30,6 +43,9 @@ a:focus, a:hover{
 }
 .margin-top-180{
 	margin-top: 180px;
+}
+.margin-bottom-30{
+  margin-bottom: 30px;
 }	
 .margin-bottom-60{
 	margin-bottom: 60px;
@@ -38,7 +54,15 @@ a:focus, a:hover{
 .vh-100{
 	height: 100vh;
 }
-
+.container-h-300{
+  height: 330px;
+}
+.shadow{
+  box-shadow: 2px 0px 33px #242424;
+}
+.transition{
+  transition: all 0.5s ease;
+}
 h1{
 	font-family: 'orbitron';
 }
@@ -46,11 +70,16 @@ h1{
 .big-title{
 	line-height: 1;
 }
-
+.yellowtail{
+  font-family: "yellowtail";
+}
 .hidden{
 	display: none;
 }
-
+.btn-outline-purple{
+  border-color: purple;
+  color: purple;
+}
 
 .fixed{
 	position: absolute;
@@ -63,7 +92,7 @@ h1{
     margin: 15px 0;
 }
 #clockdiv{
-    padding-top: 60px;
+    padding-top: 45px;
 }
 .count-down{
     background: rgba(255, 255, 255, 0.08);
@@ -73,7 +102,7 @@ h1{
 }
 .count-down span.h2{
 	display: block;
-  font-size: 100px;
+  font-size: 60px;
   font-family: "orbitron";
 }
 
@@ -90,7 +119,7 @@ h1{
   margin: 5px;
   border-radius: 50%;
   list-style: none;
-  background-color: rgb(249, 194, 194);
+  background-color: rgb(253, 213, 213);
   padding: 2px;
   width: 30px;
   height: 30px;
@@ -98,9 +127,8 @@ h1{
   transition: 0.8s;
   cursor: pointer;
 }
-.page-number li:hover, .page-number .on{
+.page-number li:hover, .pinky .on, .page-number li:hover, .red .on{
 	opacity: 1 ;
-	background-color: #EB1583;
 }
 
 .price-tag{
@@ -111,7 +139,6 @@ h1{
     width: 70px;
     height: 70px;
     display: inline-block;
-    background-color: #eb1583;
     color: white;
     font-size: 13px;
     text-align: center;
@@ -126,6 +153,10 @@ h1{
 	.big-title{
 		font-size: 80px;
   }
+  .item-info,.item-sum{
+    margin-top: 60px;
+  }
+  
 }
 
 
@@ -134,13 +165,12 @@ h1{
   		bottom: 30px;
   		z-index: 9;
   	}
-    .count-down{
-      background-color: transparent;
-    }
     .count-down span.h2{
-      font-size: 35px;
+      font-size: 30px;
+      margin-bottom: -8px;
     }
     .price-tag{
+      padding-top: 9px;
     width: 50px;
     height: 50px;
     font-size: 10px;
@@ -149,6 +179,15 @@ h1{
     h1{
       font-size: 1.5rem;
     }
+    h2{
+      font-size: 1rem;
+    }
+    h3, h4{
+      font-size: 0.8rem;
+    }
+    .item-sum{
+    margin-top: 15px;
+  }
 
 }
 
@@ -165,9 +204,30 @@ h1{
 
 
 
-
-
-
+#home-page .subinfo{
+  line-height: 1.3;
+  padding-left: 9px;
+  color: #f284a9;
+}
+#home-page .text-bottom{
+  line-height: 1;
+  color: #c0c0c0;
+  padding: 0 10px;
+  position: absolute;
+  bottom: 10px;
+  font-size: 10px;
+}
+.home-product-name{
+  font-family: 'orbitron';
+  position: absolute;
+  bottom: 10%;
+  color: #fff;
+  height: 18%;
+}
+.home-product-outline{
+    opacity: 0.1;
+    position: absolute;
+}
 
 
 .circle{
@@ -224,17 +284,26 @@ h1{
 }
 
 @media only screen and (min-width: 768px){
-  #home-page .col-12:first-child, #home-page .col-12:last-child{
-    margin-top: 15%;
-  }
+
   .info-imgs{
     margin-top: -10%;
   }
   .add-to-cart{
     margin-top: 30px;
   }
+  .vh-33{
+    height: 100vh;
+    overflow: hidden;
+  }
+  .home-product-outline{
+    bottom: 30%;
+    height: 65%;
+    left: 10%;
+  }
+
 }
 
+/*phone*/
 @media only screen and (max-width: 767px){
   .circle{
     width: 200px;
@@ -257,6 +326,19 @@ h1{
   .info-imgs{
     margin-top: -25%;
   }
+  .vh-33{
+    height: 33.33vh;
+    overflow: hidden;
+  }
+  #home-page h1, #home-page h4{
+    font-size: 0.8rem;
+  }
+  .home-product-outline{
+  width: 130%;
+    height: auto;
+    left: 0%;
+  }
+
 
 
 }
@@ -292,18 +374,30 @@ h1{
 
 
 
+.logo-icon{
+  position: absolute;
+  left: 15px;
+  top: 15px;
+  height: 90px;
+}
 
 
-
-
+.bg-shipping{
+  background-image: url('../imgs/shipping.jpg');
+  background-size: cover;
+  background-position: center;
+}
 
 .bg-white{
 	background-color: #fff;
 }
-.bg-pink{
-	background-color: #f9c2c2;
+.bg-gray{
+  background-color: #dbdbdb;
 }
-.bg-pinky{
+.bg-pink{
+	background-color: #ffb7cf;
+}
+.bg-pinky, .page-number.pinky li:hover, .pinky .on{
 	background-color: #EB1583;
 }
 .text-pinky{
@@ -312,42 +406,36 @@ h1{
 .text-purple{
 	color: #A41FCA;
 }
-#red, .red-radius{
-    background: #ff4343; /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(#f9c2c2, #ff4343); /* For Safari 5.1 to 6.0 */
-         background: -o-linear-gradient(#f9c2c2, #ff4343); /* For Opera 11.1 to 12.0 */
-       background: -moz-linear-gradient(#f9c2c2, #ff4343); /* For Firefox 3.6 to 15 */
-            background: linear-gradient(#f9c2c2, #ff4343); /* Standard syntax */
+.text-silver{
+  color: #c0c0c0;
 }
-body.red, .bg-red{
-	background-color: #ff4343;
+#red, .red-radius{
+    background: #8d1c1c; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#ffb7cf, #8d1c1c); /* For Safari 5.1 to 6.0 */
+         background: -o-linear-gradient(#ffb7cf, #8d1c1c); /* For Opera 11.1 to 12.0 */
+       background: -moz-linear-gradient(#ffb7cf, #8d1c1c); /* For Firefox 3.6 to 15 */
+            background: linear-gradient(#ffb7cf, #8d1c1c); /* Standard syntax */
+}
+body.red, .bg-red, .page-number.red li:hover, .red .on{
+	background-color: #8d1c1c;
 }
 .text-red{
-	color: #ff4343;
+	color: #8d1c1c;
 }
 
 #purple, .purple-radius {
     background: #A41FCA; /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(#f9c2c2, #A41FCA); /* For Safari 5.1 to 6.0 */
-         background: -o-linear-gradient(#f9c2c2, #A41FCA); /* For Opera 11.1 to 12.0 */
-       background: -moz-linear-gradient(#f9c2c2, #A41FCA); /* For Firefox 3.6 to 15 */
-            background: linear-gradient(#f9c2c2, #A41FCA); /* Standard syntax */
+    background: -webkit-linear-gradient(#ffb7cf, #A41FCA); /* For Safari 5.1 to 6.0 */
+         background: -o-linear-gradient(#ffb7cf, #A41FCA); /* For Opera 11.1 to 12.0 */
+       background: -moz-linear-gradient(#ffb7cf, #A41FCA); /* For Firefox 3.6 to 15 */
+            background: linear-gradient(#ffb7cf, #A41FCA); /* Standard syntax */
 }
 body.purple, .bg-purple{
 	background-color: #A41FCA;
 }
 
 
-#blue, .blue-radius{
-    background: #bbf4fa; /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(#f9c2c2, #bbf4fa); /* For Safari 5.1 to 6.0 */
-         background: -o-linear-gradient(#f9c2c2, #bbf4fa); /* For Opera 11.1 to 12.0 */
-       background: -moz-linear-gradient(#f9c2c2, #bbf4fa); /* For Firefox 3.6 to 15 */
-            background: linear-gradient(#f9c2c2, #bbf4fa); /* Standard syntax */
-}
-body.blue{
-	background-color: #bbf4fa;
-}
+
 
 
 
@@ -381,20 +469,6 @@ body.blue{
 
 .product {
   animation: float 7s ease-out infinite;
-
-}
-.product1 {
-  animation: float 4s ease-out infinite;
-
-}
-
-.product2 {
-  animation: float 5s ease-out infinite;
-
-}
-.product3 {
-  animation: float 6s ease-out infinite;
-
 }
 @keyframes float {
   50% {
@@ -402,7 +476,9 @@ body.blue{
 
   }
 }
-
+footer{
+  font-size: 9px;
+}
 
 
 
@@ -417,7 +493,6 @@ body.blue{
   font-family: 'orbitron';
 }
 }
-
 
 
 
