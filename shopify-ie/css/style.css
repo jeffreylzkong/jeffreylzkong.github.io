@@ -1,17 +1,17 @@
 @font-face {
   font-family: 'orbitron';
-  src: url('/fonts/orbitron-normal-normal.ttf');
+  src: url('../fonts/orbitron-normal-normal.ttf');
 }
 
 @font-face {
   font-family: 'orbitron';
-  src:  url('/fonts/orbitron-bold-normal.ttf');
+  src:  url('../fonts/orbitron-bold-normal.ttf');
   font-weight:bold;
 }
 
 @font-face {
   font-family: 'yellowtail';
-  src: url('/fonts/yellowtail-normal-normal.ttf');
+  src: url('../fonts/yellowtail-normal-normal.ttf');
 }
 p{
   font-weight: lighter;
