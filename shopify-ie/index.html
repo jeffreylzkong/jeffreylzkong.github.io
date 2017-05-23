@@ -75,7 +75,7 @@
 
         <div class="col-7 col-md-9">
           <div class="row">
-            <div class="col-12 col-md-4 vh-33 shadow p-100 transition" style="background-color: #F284A9;">
+            <div class="col-12 col-md-4 vh-33 shadow p-100 transition product" style="background-color: #F284A9;" url="ie100.html">
               <img class="home-product-outline"src="imgs/ie100.png">
               <div class="home-product-name">
                 <h1><b>IE-100</b></h1>
@@ -83,7 +83,7 @@
               </div>
             </div>
 
-            <div class="col-12 col-md-4 vh-33 shadow p-200 transition" style="background-color: #EB4980;">
+            <div class="col-12 col-md-4 vh-33 shadow p-200 transition product" style="background-color: #EB4980;" url="ie200.html">
               <img class="home-product-outline"src="imgs/ie200.png">
               <div class="home-product-name">
                 <h1><b>IE-200</b></h1>
@@ -91,7 +91,7 @@
               </div>
             </div>
 
-            <div class="col-12 col-md-4 vh-33 shadow p-300 transition" style="background-color: #f62d70;">
+            <div class="col-12 col-md-4 vh-33 shadow p-300 transition product" style="background-color: #f62d70;" url="ie300.html">
               <img class="home-product-outline"src="imgs/ie300.png">
               <div class="home-product-name">
                 <h1><b>IE-300</b></h1>
@@ -157,6 +157,11 @@
         $( ".p-200" ).removeClass('col-md-4 col-md-3 col-md-6');
         $( ".p-200" ).addClass('col-md-3');
       });
+
+      $(".product").click(function(e){
+        window.location = $(this).attr("url");
+        e.preventDefault(); 
+      })
 
 
 
