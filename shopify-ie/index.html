@@ -158,10 +158,10 @@
         $( ".p-200" ).addClass('col-md-3');
       });
 
-      $(".product").click(function(e){
+      $(".product").('click touchstart', function(e){
         window.location = $(this).attr("url");
         e.preventDefault(); 
-      })
+      });
 
 
 
