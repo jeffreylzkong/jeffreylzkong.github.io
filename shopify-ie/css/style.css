@@ -397,6 +397,7 @@ h1{
 .bg-pink{
 	background-color: #ffb7cf;
 }
+
 .bg-pinky, .page-number.pinky li:hover, .pinky .on{
 	background-color: #EB1583;
 }
@@ -411,10 +412,10 @@ h1{
 }
 #red, .red-radius{
     background: #8d1c1c; /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(#ffb7cf, #8d1c1c); /* For Safari 5.1 to 6.0 */
-         background: -o-linear-gradient(#ffb7cf, #8d1c1c); /* For Opera 11.1 to 12.0 */
-       background: -moz-linear-gradient(#ffb7cf, #8d1c1c); /* For Firefox 3.6 to 15 */
-            background: linear-gradient(#ffb7cf, #8d1c1c); /* Standard syntax */
+    background: -webkit-linear-gradient(#ffb7cf, #ff6666); /* For Safari 5.1 to 6.0 */
+         background: -o-linear-gradient(#ffb7cf, #ff6666); /* For Opera 11.1 to 12.0 */
+       background: -moz-linear-gradient(#ffb7cf, #ff6666); /* For Firefox 3.6 to 15 */
+            background: linear-gradient(#ffb7cf, #ff6666); /* Standard syntax */
 }
 body.red, .bg-red, .page-number.red li:hover, .red .on{
 	background-color: #8d1c1c;
@@ -424,11 +425,11 @@ body.red, .bg-red, .page-number.red li:hover, .red .on{
 }
 
 #purple, .purple-radius {
-    background: #A41FCA; /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(#ffb7cf, #A41FCA); /* For Safari 5.1 to 6.0 */
-         background: -o-linear-gradient(#ffb7cf, #A41FCA); /* For Opera 11.1 to 12.0 */
-       background: -moz-linear-gradient(#ffb7cf, #A41FCA); /* For Firefox 3.6 to 15 */
-            background: linear-gradient(#ffb7cf, #A41FCA); /* Standard syntax */
+    background: #dc71fb; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#ffb7cf, #dc71fb); /* For Safari 5.1 to 6.0 */
+         background: -o-linear-gradient(#ffb7cf, #dc71fb); /* For Opera 11.1 to 12.0 */
+       background: -moz-linear-gradient(#ffb7cf, #dc71fb); /* For Firefox 3.6 to 15 */
+            background: linear-gradient(#ffb7cf, #dc71fb); /* Standard syntax */
 }
 body.purple, .bg-purple{
 	background-color: #A41FCA;
